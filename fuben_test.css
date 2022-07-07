@@ -1,0 +1,28 @@
+p.a1{color: red;}
+
+#a:hover {border:3px solid red;}
+#a:active {border: 6px solid green;}
+#a:focus {border: 10px solid blue;}
+
+p.a.c > span{color: red;}
+[class="spangreen"]{color: green;}
+.spanblue{color: blue;}
+
+:link {color: pink;}
+:visited {color: orange ;}
+
+
+[href*="a@b.com"]{color: blue ;}
+a[href="tel:12345678"]{color: yellow ;}
+a[href="aaa.pdf" i]{border: 3px solid ;}
+
+
+li.r{color: red;}
+
+[class="1_25"]{color: red;}
+[class="35_50"]{color: green;}
+[class="60_100"]{color: blue;}
+
+
+[class="zhishu"]{color: yellow;}
+[class="prime1"]{color: orange;}
