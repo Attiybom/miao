@@ -1,28 +1,38 @@
-p.a1{color: red;}
+body > p:first-child{color: red;}
 
-#a:hover {color:red;}
-#a:active {color:green;}
-#a:focus {color:blue;}
+p.a:hover{color: red;}
+p.a:active{color: green;}
+p.a:focus{color: blue;}
+
 
 p.a.c > span{color: red;}
-[class="spangreen"]{color: green;}
-.spanblue{color: blue;}
+p.a.c > span span:first-child{color: green;}
+p.a.c > span span:last-child{color: blue;}
 
-:link {color: pink;}
-:visited {color: orange ;}
-
-
-[href*="a@b.com"]{color: blue ;}
-a[href="tel:12345678"]{color: yellow ;}
-a[href="aaa.pdf" i]{border: 3px solid ;}
+div a:link {color: pink;}
+div a:visited {color: orange ;}
 
 
-li.r{color: red;}
+div a[href*="a@b.com"]{color: blue ;}
+div a[href^="12345678"]{color: yellow ;}
+div a[href$="aaa" i]{border: 3px solid ;}
 
-[class="1_25"]{color: red;}
-[class="35_50"]{color: blue;}
-[class="60_100"]{color: green;}
+div.a ul li:nth-child(4){color: red;}
+div.a ul li:nth-child(5){color: red;}
+div.a ul li:nth-child(6){color: red;}
+div.a ul li:nth-child(7){color: red;}
 
+div.b ul li:nth-child(n){color: red;}
+div.b ul li:nth-child(n+26){color: red;}
+div.b ul li:nth-child(n+35){color: blue;}
+div.b ul li:nth-child(n+65){color: green;}
 
-[class="zhishu"]{color: yellow;}
-[class="prime1"]{color: orange;}
+div.prime ul li:nth-child(2n){color: blue;}
+div.prime ul li:nth-child(3n){color: blue;}
+div.prime ul li:nth-child(5n){color: blue;}
+div.prime ul li:nth-child(7n){color: blue;}
+div.prime ul li:nth-child(1){color:yellow;}
+div.prime ul li:nth-child(2){color:white;}
+div.prime ul li:nth-child(3){color:white;}
+div.prime ul li:nth-child(5){color:white;}
+div.prime ul li:nth-child(7){color:white;}
