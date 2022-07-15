@@ -4,44 +4,48 @@
     <title>3</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <style>
+      html{
+        width: 100%;
+        height: 100%;
+      }
       body{
+        width: 100%;
+        height: 100%;
         margin: 0;
       }
       /*body的所有子元素span*/
       body > span{
-        display: block;
+        display: inline-block;
         box-sizing: border-box;
         border: 2px solid black;
+        vertical-align: top;
       }
       /* 区块1 */
       .s1{
         width: 200px;
-        height: 100vh;
+        height: 100%;
         background-color: pink;
       }
       /* 区块2 */
       .s2{
         background-color:antiquewhite;
-        width: 600px;
-        margin-left: 200px;
-        margin-top: -100vh;
-        height: 100vh;
+        width: calc(100% - 600px);
+        height: 100%;
+        vertical-align: top;
       }
       /* 区块3 */
       .s3{
         background-color: palevioletred;
-        width: 300px;
-        margin-left: 800px;
-        margin-top: -100vh;
-        height: 100vh;
+        width: 200px;
+        height: 100%;
+        vertical-align: top;
       }
       /* 区块4 */
       .s4{
         background-color:sandybrown;
-        width: calc(100vw - 1100px);
-        margin-left:1100px;
-        margin-top: -100vh;
-        height: 100vh;
+        width: 200px;
+        height: 100%;
+        vertical-align: top;
       }
       /* strong标题块元素化 */
       strong{
@@ -50,13 +54,19 @@
         font-size: 30px;
         /* border: 2px solid black; */
         line-height: 70px;
+        height: 70px;
+        margin: 0;
       }
       /* 标题右对齐 */
       strong:not(.spst2){
+        margin: 0;
        text-align: right;
       }
-      .spst2{
-        border-bottom: 2px solid black;
+      .s2d{
+        box-sizing: border-box;
+        margin: 0;
+        border: 1px solid black;
+        height: 70px;
       }
       /* 输入框与按钮 */
       #input1{
@@ -65,35 +75,38 @@
         height: 20px;
         margin-left: 20px;
       }
+      #input2{
+        height: 20px;
+        box-sizing: border-box;
+        margin: 0;
+      }
       /* 区块1的span */
       #spsp1{
         display: block;
         box-sizing: border-box;
         /* border: 4px dotted blue; */
-        height: 85%;
+        height: calc(100% - 70px);
         overflow: auto;
       }
       /* 链接 */
       a{
         display: block;
         text-align: center;
+        margin: 0;
       }
       /* 区块2内容 */
-      #spsp2{
+      section{
         display: block;
         box-sizing: border-box;
-        height: calc(100vh - 80px);
+        height: calc(100% - 70px);
         overflow: auto;
       }
-
     </style>
   </head>
-  <body>
-    <span class="s1">
-      <strong class="spst1">区块1</strong>
-      <input type="text" name="" id="input1">
-      <input type="button" value="   " id="input2">
-      <span id="spsp1">
+  <body><span class="s1"><strong class="spst1">区块1
+      </strong><span id="spsp1">
+        <input type="text" name="" id="input1">
+        <input type="button" value="   " id="input2">
         <a href="">link</a>
         <a href="">link</a>
         <a href="">link</a>
@@ -126,30 +139,25 @@
         <a href="">link</a>
         <a href="">link</a>
       </span>
-    </span>
-    <span class="s2">
-      <strong class="spst2">区块2</strong>
-      <span id="spsp2">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque asperiores atque, et veniam qui reiciendis corporis quod impedit aut. Iusto in sunt voluptate libero sint aspernatur cupiditate expedita. Molestias, ipsam?
-      </span>
-    </span>
-    <span class="s3">
-      <strong class="spst3">区块3</strong>
-    </span>
-    <span class="s4">
-      <strong class="spst4">区块4</strong>
-    </span>
+    </span><span class="s2">
+      <div class="s2d">区块2</div>
+      <section>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nesciunt ex facilis eum aspernatur accusamus delectus cumque error expedita corporis, consequuntur aliquid nulla ipsum, provident beatae deleniti earum soluta? Obcaecati!
+      </section>
+    </span><span class="s3"><strong class="spst3">区块3</strong>
+    </span><span class="s4"><strong class="spst4">区块4</strong></span>
   </body>
 </html>
