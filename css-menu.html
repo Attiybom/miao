@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title></title>
+    <style>
+      html,body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
+      body * {
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 0;
+        z-index: 0px;
+      }
+      #bodydiv {
+        height:100%;
+        width: 100%;
+      }
+      /* 框架 */
+      /* 顶部 */
+      header{
+        position: relative;
+        background-color: black;
+        color:white;
+        width:100%;
+        height: 5%;
+        vertical-align: top;
+      }
+      header > div{
+        position: relative;
+        display: inline;
+        margin: 5px ;
+        top:-5px
+      }
+      header *{
+        position: relative;
+        z-index: 5;
+      }
+      .wz{
+        position: relative;
+        display: inline-block;
+        background-color: black;
+        color: white;
+      }
+      .wzul{
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        left: 0;
+        top: 100%;
+        white-space: nowrap;
+        background-color: black;
+        z-index: 10px;
+      }
+      .wz:hover > ul{
+        display: block;
+      }
+      .wzul li:hover{
+        background-color: blue;
+      }
+      .wzulli{
+        color: white;
+        position: relative;
+        display: block;
+        /* 上面这句 */
+        background-color: black;
+      }
+      .wzulli:hover{
+        background-color: black;
+      }
+      .wzulli > ul {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        left: 0;
+        top: 100%;
+        white-space: nowrap;
+        background-color: black;
+      }
+      .wzulli:hover > ul {
+        display: block;
+      }
+      .wzlili{
+        background-color: black;
+        display: block;
+        /* position: relative;
+        left: 50px; */
+      }
+      /* 顶部 */
+      /* 左侧栏 */
+      aside{
+        background-color: black;
+        color: white;
+        position: relative;
+        width:5%;
+        height:93%;
+        vertical-align: top;
+        z-index: 0;
+      }
+      aside > div {
+        /* position: relative; */
+        display: inline-block;
+        background-color: black;
+        color: white;
+        margin: 5px ;
+        /* border: 1px solid black; */
+      }
+      aside div > section {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        left: 0;
+        top: 100%;
+        white-space: nowrap;
+        background-color: black;
+        z-index: 5;
+      }
+      .ads{
+        box-sizing: border-box;
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+        position: fixed;
+        width: 200px;
+        left:5%;
+        height: 93%;
+        top: 5%;
+        vertical-align: top;
+      }
+      aside div:hover >section{
+        display: block;
+      }
+      .ads:hover{
+        background-color: grey;
+      }
+      /* 中间主体 */
+      main{
+        background-color: rgba(0, 0, 0, 80%);
+        color: white;
+        position: absolute;
+        width: 95%;
+        left: 5%;
+        height: 93%;
+        top: 5%;
+        vertical-align: top;
+      }
+      /* 底部 */
+      footer{
+        background-color:purple;
+        color: white;
+        width: 100%;
+        height: 3%;
+        position: fixed;
+        left: 0;
+        top: 97%;
+        vertical-align: bottom;
+      }
+      footer > div {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bodydiv"><header>
+       <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F4324074-6427727eb81bc733.png&refer=http%3A%2F%2Fupload-images.jianshu.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660556409&t=32be947c1427c67aa382f6bd129fac28" alt="VScode" width="70px" height="30px">
+        <div class="wz">文件(F)
+          <ul class="wzul">
+            <li class="wzulli">新建
+              <!-- <ul>
+                <li class="wzlili">新建窗口</li>
+                <li class="wzlili">新建文件</li>
+              </ul> -->
+            </li>
+            <li>打开</li>
+            <li class="wzulli">保存  >
+              <ul>
+                <li class="wzlili">自动保存</li>
+                <li class="wzlili">另存为</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="wz">编辑(E)
+          <ul class="wzul">
+            <li class="wzulli">操作
+              <!-- <ul>
+                <li class="wzlili">撤销</li>
+                <li class="wzlili">恢复</li>
+              </ul> -->
+            </li>
+            <li>展开</li>
+            <li class="wzulli">切换  >
+              <ul>
+                <li class="wzlili">切换行注释</li>
+                <li class="wzlili">切换块注释</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="wz">选择(S)
+          <ul class="wzul">
+            <li class="wzulli">向上
+              <!-- <ul>
+                <li class="wzlili">移动</li>
+                <li class="wzlili">复制</li>
+              </ul> -->
+            </li>
+            <li>中间</li>
+            <li class="wzulli">向下  >
+              <ul>
+                <li class="wzlili">移动</li>
+                <li class="wzlili">复制</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="wz">查看(V)
+          <ul class="wzul">
+            <li class="wzulli">外观
+              <!-- <ul>
+                <li class="wzlili">全屏</li>
+                <li class="wzlili">居中布局</li>
+              </ul> -->
+            </li>
+            <li>输出</li>
+            <li class="wzulli">编辑器布局  >
+              <ul>
+                <li class="wzlili">单列</li>
+                <li class="wzlili">双列</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="wz">转到(G)
+          <ul class="wzul">
+            <li class="wzulli">转换
+              <!-- <ul>
+                <li class="wzlili">编辑器</li>
+                <li class="wzlili">组</li>
+              </ul> -->
+            </li>
+            <li>返回</li>
+            <li class="wzulli">切换  >
+              <ul>
+                <li class="wzlili">定义</li>
+                <li class="wzlili">声明</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="wz">运行(R)
+          <ul class="wzul">
+            <li class="wzulli">新建
+              <!-- <ul>
+                <li class="wzlili">添加</li>
+                <li class="wzlili">运行</li>
+              </ul> -->
+            </li>
+            <li>安装</li>
+            <li class="wzulli">启用  >
+              <ul>
+                <li class="wzlili">禁用</li>
+                <li class="wzlili">删除</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="wz">终端(T)
+          <ul class="wzul">
+            <li class="wzulli">运行  >
+              <ul>
+                <li class="wzlili">任务</li>
+                <li class="wzlili">文本</li>
+              </ul>
+            </li>
+            <li class="wzulli">配置  >
+              <ul>
+                <li class="wzlili">活动</li>
+                <li class="wzlili">文件</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="wz">帮助(H)
+          <ul class="wzul">
+            <li class="wzulli">开始  >
+              <ul>
+                <li class="wzlili">帮吗！</li>
+                <li class="wzlili">不帮！</li>
+              </ul>
+            </li>
+            <li class="wzulli">结束  >
+              <ul>
+                <li class="wzlili">好耶！</li>
+                <li class="wzlili">坏耶！</li>
+              </ul>
+            </li>
+          </ul>
+        </div> -->
+      </header><aside>
+        <div class="asidediv">资源<br>图标
+          <section class="ads">资源管理器</section>
+        </div>
+        <div class="asidediv">搜索<br>图标
+          <section class="ads">搜索</section>
+        </div>
+        <div class="asidediv">管理<br>图标
+          <section class="ads">源代码管理</section>
+        </div>
+        <div class="asidediv">运行<br>图标
+          <section class="ads">运行与调试</section>
+        </div>
+        <div class="asidediv">扩展<br>图标
+          <section class="ads">扩展</section>
+        </div>
+      </aside><main>
+
+      </main><footer>
+        <div class="dbtb">❌ 0</div>
+        <div class="dbtb">⚠ 0</div>
+      </footer>
+    </div>
+  </body>
+</html>
