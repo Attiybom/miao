@@ -86,8 +86,12 @@
         white-space: nowrap;
         background-color: black;
       }
-      .wzulli:hover > ul {
+      .wzulli:hover > #ul1 {
         display: block;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        text-align: center;
       }
       .wzlili{
         background-color: black;
@@ -177,15 +181,18 @@
        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F4324074-6427727eb81bc733.png&refer=http%3A%2F%2Fupload-images.jianshu.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660556409&t=32be947c1427c67aa382f6bd129fac28" alt="VScode" width="70px" height="30px">
         <div class="wz">文件(F)
           <ul class="wzul">
-            <li class="wzulli">新建
-              <!-- <ul>
-                <li class="wzlili">新建窗口</li>
+            <li class="wzulli">新建>
+              <ul id="ul1">
+                <li class="wzlili">新建窗口(F11)</li>
+                <li class="wzlili">-------</li>
                 <li class="wzlili">新建文件</li>
-              </ul> -->
+                <li class="wzlili">-------</li>
+                <li class="wzlili">文件新建</li>
+              </ul>
             </li>
             <li>打开</li>
             <li class="wzulli">保存>
-              <ul>
+              <ul id="ul1">
                 <li class="wzlili">自动保存</li>
                 <li class="wzlili">另存为</li>
               </ul>
@@ -194,15 +201,15 @@
         </div>
         <div class="wz">编辑(E)
           <ul class="wzul">
-            <li class="wzulli">操作
-              <!-- <ul>
-                <li class="wzlili">撤销</li>
-                <li class="wzlili">恢复</li>
-              </ul> -->
+            <li class="wzulli">操作</li>
+            <li class="wzulli">展开>
+              <ul id="ul1">
+                <li class="wzlili">移动</li>
+                <li class="wzlili">复制</li>
+              </ul>
             </li>
-            <li>展开</li>
-            <li class="wzulli">切换  >
-              <ul>
+            <li class="wzulli">切换>
+              <ul id="ul1">
                 <li class="wzlili">切换行注释</li>
                 <li class="wzlili">切换块注释</li>
               </ul>
@@ -212,14 +219,10 @@
         <div class="wz">选择(S)
           <ul class="wzul">
             <li class="wzulli">向上
-              <!-- <ul>
-                <li class="wzlili">移动</li>
-                <li class="wzlili">复制</li>
-              </ul> -->
             </li>
             <li>中间</li>
-            <li class="wzulli">向下  >
-              <ul>
+            <li class="wzulli">向下>
+              <ul id="ul1">
                 <li class="wzlili">移动</li>
                 <li class="wzlili">复制</li>
               </ul>
@@ -235,8 +238,8 @@
               </ul> -->
             </li>
             <li>输出</li>
-            <li class="wzulli">编辑器布局  >
-              <ul>
+            <li class="wzulli">编辑器布局>
+              <ul id="ul1">
                 <li class="wzlili">单列</li>
                 <li class="wzlili">双列</li>
               </ul>
