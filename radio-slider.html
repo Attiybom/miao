@@ -1,101 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <style>
-    body *{
-      box-sizing: border-box;
-    }
-    section {
-      border: 5px solid;
-      position: relative;
-    }
-    section input {
-      position: relative;
-      top: 300px  ;
-      z-index: 8;
-      display: none;
-    }
-    .imgs {
-      position: relative;
-      display: inline-block;
-      width: 800px;
-      height: 600px;
-    overflow: hidden;
-    }
-    .imgs img {
-      width: 100%;
-      height: 100%;
-      left: 100%;
-      transition: 1s;
-      position: absolute;
-    }
-    .indicators {
-      position: absolute;
-      bottom: 80px;
-      left: 300px;
-      z-index: 8;
-      font-size: 0;
-    }
-    .indicators label {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      background-color: rgba(0, 0, 0, 10%);
-      border: 1px solid black;
-      cursor: pointer;
-      border-radius: 25px;
-      margin: 20px;
-    }
-    .indicators label:hover {
-      background-color: red;
-    }
-    input:nth-child(1):checked ~ .imgs img:nth-child(1),
-    input:nth-child(2):checked ~ .imgs img:nth-child(2),
-    input:nth-child(3):checked ~ .imgs img:nth-child(3),
-    input:nth-child(4):checked ~ .imgs img:nth-child(4) {
-      left: 0;
-    }
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <style>
+      html,body{
+        height: 100%;
+        margin: 0;
+      }
+      body *{
+        box-sizing: border-box;
+      }
 
-    input:nth-child(1):checked ~ .indicators label:nth-child(1)
-    {
-      background-color: black;
-    }
-    input:nth-child(2):checked ~ .indicators label:nth-child(2)
-    {
-      background-color: #984300;
-    }
-    input:nth-child(3):checked ~ .indicators label:nth-child(3)
-    {
-      background-color: red;
-    }
-    input:nth-child(4):checked ~ .indicators label:nth-child(4) {
-      background-color: white;
-    }
-  </style>
-</head>
-<body>
-  <section>
-    <input type="radio" id="r1" name="radio1" checked>
-    <input type="radio" id="r2" name="radio1">
-    <input type="radio" id="r3" name="radio1">
-    <input type="radio" id="r4" name="radio1">
+      section{
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
 
-    <div class="imgs">
-      <img src="https://p3.dcarimg.com/img/tos-cn-i-0000c0030/860eda72d6534301a1d4ed82204af223~1200x0.webp" alt="">
-      <img src="https://p3.dcarimg.com/img/tos-cn-i-0000/c3fe766fd38e444bb1a864de73546610~1200x0.webp" alt="">
-      <img src="https://p3.dcarimg.com/img/tos-cn-i-0000/69d98c15419f44c8a4db99a3ef731638~1200x0.webp" alt="">
-      <img src="https://p3.dcarimg.com/img/tos-cn-i-0000c0030/c03183920f05460199ecc8e771e60eb8~1200x0.webp" alt="">
-    </div>
-    <div class="indicators">
-      <label for="r1"></label>
-      <label for="r2"></label>
-      <label for="r3"></label>
-      <label for="r4"></label>
-    </div>
-  </section>
+      section input{
+        position: relative;
+        display: none;
+        width: 40px;
+        height: 40px;
+      }
 
+      .imgs {
+        position: absolute;
+        display: inline-block;
+        width: 800px;
+        height: 600px;
+        overflow: hidden;
+      }
+      .imgs img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 1s;
+      }
+      .indicators {
+        position:relative;
+        z-index: 5;
+        font-size: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .indicators label{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+        background-color: white;
+        border: 2px solid black;
+        cursor: pointer;
+        border-radius: 25px;
+        position: relative;
+      }
+      input:nth-child(1):checked ~ .imgs img:nth-child(1),
+      input:nth-child(2):checked ~ .imgs img:nth-child(2){
+        left: 0;
+      }
+      input:nth-child(1):checked ~ .indicators label:nth-child(1)
+      {
+        background-color: black;
+      }
+      input:nth-child(2):checked ~ .indicators label:nth-child(2){
+        background-color: red;
+      }
 
-</body>
+    </style>
+  </head>
+  <body>
+    <section>
+
+      <input type="radio" id="r1" name="cat" checked>
+      <input type="radio" id="r2" name="cat">
+
+      <div class="imgs">
+        <img src="https://p3.dcarimg.com/img/tos-cn-i-0000c0030/860eda72d6534301a1d4ed82204af223~1200x0.webp" alt="blackcat">
+        <img src="https://p3.dcarimg.com/img/tos-cn-i-0000/69d98c15419f44c8a4db99a3ef731638~1200x0.webp" alt="redcat">
+      </div>
+
+      <div class="indicators">
+        <label for="r1"></label>
+        <label for="r2"></label>
+      </div>
+
+    </section>
+  </body>
 </html>
