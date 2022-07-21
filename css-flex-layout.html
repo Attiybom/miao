@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)file:///C:/Users/a9106/Desktop/7.21/css-block-layout%20-%20%E5%89%AF%E6%9C%AC.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .dh{
+      background-color: black;
+    }
+    header{
+      box-sizing: border-box;
+      background-color: black;
+      color: white;
+      text-align: center;
+      height: 4em;
+      width: 600px;
+      margin: 0 auto;
+    }
+    .sec{
+      box-sizing: border-box;
+      /* border: 1px solid black; */
+      width: 600px;
+      margin:0 auto 20px auto;
+    }
+    #p1{
+      width: 600px;
+      height: 4em;
+      text-align: center;
+    }
+
+    .sec div {
+      box-sizing: border-box;
+      border: 3px solid black;
+      background-color: pink;
+      width: 180px;
+      height: 40px;
+      margin: 15px 30px 15px 0px;
+    }
+    .sec div:hover{
+      background-color: red;
+    }
+
+
+    span{
+      display: block;
+      box-sizing: border-box;
+      border: 3px solid black;
+      background-color: blueviolet;
+      width: 180px;
+      height: 40px;
+      margin: 15px 30px 15px 0px;
+    }
+
+    .ss2{
+      margin-left: 210px;
+    }
+
+    #ss21{
+      margin-top: -220px;
+    }
+
+    .ss3{
+      margin-left: 420px;
+    }
+
+    #ss31{
+      margin-top: -220px;
+    }
+
+
+    .sec span:hover{
+      background-color: red;
+    }
+    .plink:not(#link5){
+      border-bottom:1px dotted black;
+    }
+
+    .df{
+      background-color: hotpink;
+    }
+
+    footer{
+      background-color: hotpink;
+      text-align: center;
+    }
+
+    .secflex{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px 30px;
+    }
+    .secflex > .divflex{
+      background-color: gold;
+      width: 180px;
+      height: 40px;
+      margin: 0px;
+    }
+
+  </style>
+  </head><body>
+    <div class="dh">
+      <header>
+        头部
+      </header>
+    </div>
+    <section class="sec">
+      <p id="p1">主体</p>
+      <section class="secflex">
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+        <div class="divflex">flex</div>
+      </section>
+
+      <span class="ss1">产品</span>
+      <span class="ss1">产品</span>
+      <span class="ss1">产品</span>
+      <span class="ss1">产品</span>
+      <span class="ss2" id="ss21">产品</span>
+      <span class="ss2">产品</span>
+      <span class="ss2">产品</span>
+      <span class="ss2">产品</span>
+      <span class="ss3" id="ss31">产品</span>
+      <span class="ss3">产品</span>
+      <span class="ss3">产品</span>
+      <span class="ss3">产品</span>
+      <p class="plink">link</p>
+      <p class="plink">link</p>
+      <p class="plink">link</p>
+      <p class="plink">link</p>
+      <p class="plink" id="link5">link</p>
+    </section>
+    <div class="df">
+      <footer>
+        尾部
+      </footer>
+    </div>
+  
+
+</body></html>
