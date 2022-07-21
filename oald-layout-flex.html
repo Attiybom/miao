@@ -2,7 +2,7 @@
 <!-- saved from url=(0046)file:///C:/Users/a9106/Desktop/Untitled-3.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
-    
+
     <style>
       html,body{
         height: 100%;
@@ -41,10 +41,24 @@
       main{
         height: calc(100% - 100px);
         overflow: auto;
+        position: relative;
       }
       a{
         display: block;
         text-align: center;
+      }
+
+      .text{
+        position: absolute;
+        width: 60%;
+        height: 20px;
+        left: 10%  ;
+      }
+      .switch{
+        position: absolute;
+        width: 20%;
+        height: 20px;
+        right: 10%  ;
       }
     </style>
   </head>
@@ -53,6 +67,9 @@
       <div>
         <header class="header1">one</header>
         <main>
+            <input type="text" name="text" class="text">
+            <input type="button" class="switch">
+            <br>
           <a href="file:///C:/Users/a9106/Desktop/Untitled-3.html">link</a>
           <a href="file:///C:/Users/a9106/Desktop/Untitled-3.html">link</a>
           <a href="file:///C:/Users/a9106/Desktop/Untitled-3.html">link</a>
@@ -137,6 +154,6 @@
       <div>three</div>
       <div>four</div>
     </section>
-  
+
 
 </body></html>
