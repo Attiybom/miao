@@ -16,6 +16,7 @@ body *{
   table-layout: fixed;
   border-collapse:collapse;
   margin: auto;
+  white-space: nowrap;
 }
 .table th,td{
   text-align: left;
@@ -109,5 +110,5 @@ body *{
   width: 30%;
 }
 .table-sm th,td{
-  padding: 5px;
+  padding: 3px;
 }
