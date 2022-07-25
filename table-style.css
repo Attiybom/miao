@@ -11,12 +11,13 @@ body *{
 
 /* table */
 
-.table table{
+.table {
   width: 95%;
-  table-layout: fixed;
+  /* table-layout: fixed; */
   border-collapse:collapse;
-  margin: auto;
+  margin: 0 auto;
   white-space: nowrap;
+  /* letter-spacing: 1px; */
 }
 .table th,td{
   text-align: left;
@@ -57,35 +58,39 @@ body *{
 }
 
 /* table-bordered */
-.table-bordered th,.table-bordered td{
+.table-bordered th,
+.table-bordered td{
   border: 1px solid #DEE2E6;
 }
 
 /* table-borderless */
-.table-borderless th,.table-borderless td{
-  border: 0px;
-}
-.table-borderless thead th{
-  border: 0px;
+.table-borderless tr {
+  border: hidden;
+  /* hidden优先级比none高，也比0px高，同时选中tr就不用选td和th */
 }
 
 /* table-dark */
-.table-dark table{
-  background-color: black;
+.table-dark{
+  background-color: #212529;
   color: white;
 }
-.table-dark thead th{
+
+.table-dark thead th {
   border-bottom: 2px solid white;
 }
-.table-dark tbody tr:hover{
+
+.table-dark tbody tr:hover {
   background-color: #323539;
 }
-.table-dark caption{
+
+.table-dark caption {
   color: black;
 }
+
 .table-dark tbody th,.table-dark tbody td{
   border-color: #323539;
 }
+
 
 /* table-sm */
 .table-sm thead th:nth-child(1){
