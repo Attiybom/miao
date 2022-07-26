@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    /* table */
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 150px;
+      }
+
+      tr,col {
+        border: 5px solid blue;
+      }
+      td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        background-color:#F0F0F0;
+        color:green;
+      }
+      td:hover {
+        border: 5px solid red;
+      }
+      /* flex */
+      section {
+        display: flex;
+        flex-flow: wrap;
+        width: 170px;
+      }
+      section div {
+        width: 50px;
+        height: 50px;
+        border: 5px solid blue;
+        margin: 0px -5px -5px 0;
+        position: relative;
+        background-color:#F0F0F0;
+        color:green;
+        text-align:center;
+        line-height:50px;
+      }
+      section div:hover {
+        border: 5px solid red;
+        z-index: 8;
+      }
+
+
+      /* float */
+      ul {
+        position: absolute;
+        left: 1%;
+        list-style: none;
+        padding: 0;
+        width: 170px;
+        margin: auto;
+        background-color: pink;
+        overflow: hidden;
+        padding-bottom: 5px;
+        background-color:#F0F0F0;
+        color:green;
+        text-align:center;
+        line-height:50px;
+      }
+
+      ul li {
+        width: 50px;
+        height: 50px;
+        border: 5px solid blue;
+        float: left;
+        margin: 0 -5px -5px 0;
+        position: relative;
+
+      }
+
+      ul li:hover {
+        border: 5px solid red;
+        z-index: 8;
+      }
+
+      .te-div {
+        position: absolute;
+        left: 50%;
+        width: 200px;
+        height: 100px;
+        background-color: green;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: end;
+        font-size: 24px;
+        transition: 3s;
+        cursor: pointer;
+        border-bottom: 3px solid red;
+      }
+
+      input:checked + label {
+        font-size: 48px;
+        background-color: #A0D0E0;
+        transition: 3s;
+      }
+
+      input{
+        display: none;
+      }
+
+
+  </style>
+</head>
+<body>
+  <h2>Table</h2>
+  <table>
+    <col>
+    <col>
+    <col>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>flex</h2>
+  <section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </section>
+
+  <h2>float</h2>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+  <input type="checkbox" id="input">
+  <label for="input" class="te-div">订阅博客</label>
+</body>
+</html>
